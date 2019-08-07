@@ -22,13 +22,25 @@
     </ul>
 
     <script type="text/javaScript">
-      fetch('https://raw.githubusercontent.com/Ganeshk01/sabre-test/master/UI-bar-graph/data.json')
+      fetch('data.json')
         .then(function(response) {
           return response.json();
         })
         .then(function(myJson) {
-          console.log(JSON.stringify(myJson));
+          if (Array.isArray(myJson)) {
+              myJson.map((value, key) => {
+              const title = key + 1;
+              const listElement = document.createElement('li');
+              const span = document.createElement('span');
+              span.setAttribute("style", `height:${value}%`);
+              span.setAttribute("title", `Item: ${title}`);
+              listElement.append(span);
+
+              document.querySelector('ul.chart').append(listElement);
+            });
+          }
         });
+        
     </script>
   </body>
 </html>
