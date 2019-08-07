@@ -15,7 +15,7 @@
         })
         .then(function(myJson) {
           if (Array.isArray(myJson)) {
-              myJson.map((value, key) => {
+              myJson.data.map((value, key) => {
               const title = key + 1;
               const listElement = document.createElement('li');
               const span = document.createElement('span');
