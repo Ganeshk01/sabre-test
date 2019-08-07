@@ -14,6 +14,7 @@
           return response.json();
         })
         .then(function(myJson) {
+        console.log('myJson: ', myJson, Array.isArray(myJson));
           if (Array.isArray(myJson)) {
               myJson.data.map((value, key) => {
               const title = key + 1;
