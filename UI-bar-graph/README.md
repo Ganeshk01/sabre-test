@@ -8,3 +8,4 @@
 
 ## Candidate Notes:
 You can open below page to see the bar graph chart.
+https://ganeshk01.github.io/sabre-test/UI-bar-graph/bar-chart.html
