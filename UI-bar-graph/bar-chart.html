@@ -14,7 +14,6 @@
           return response.json();
         })
         .then(function(myJson) {
-        console.log('is array: ', Array.isArray(myJson.data));
           if (Array.isArray(myJson.data)) {
             myJson.data.map((value, key) => {
               console.log('value: ', value);
