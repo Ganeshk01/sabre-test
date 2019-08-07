@@ -14,9 +14,9 @@
           return response.json();
         })
         .then(function(myJson) {
-        console.log('myJson: ', myJson, Array.isArray(myJson));
           if (Array.isArray(myJson)) {
-              myJson.data.map((value, key) => {
+            myJson.data.map((value, key) => {
+              console.log('value: ', value);
               const title = key + 1;
               const listElement = document.createElement('li');
               const span = document.createElement('span');
