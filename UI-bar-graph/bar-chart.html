@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Bar Chart</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <body>
+    <ul class="chart">
+      <li>
+        <span style="height:5%" title="ActionScript"></span>
+      </li>
+      <li>
+        <span style="height:80%" title="JavaScript"></span>
+      </li>
+      <li>
+        <span style="height:50%" title="CoffeScript"></span>
+      </li>
+      <li>
+        <span style="height:15%" title="HTML"></span>
+      </li>
+    </ul>
+
+    <script type="text/javaScript">
+      fetch('./data.json')
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(myJson) {
+          console.log(JSON.stringify(myJson));
+        });
+    </script>
+  </body>
+</html>
